@@ -11,7 +11,8 @@ class ProductsController extends Controller
     //* MOSTRAR TODOS OS PRODUTOS
     public function index()
     {
-        return Products::all();
+        $products = new Products();
+        return $products = $products->orderBy('nome')->get();
     }
 
     //* CRIAR PRODUTO
