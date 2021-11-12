@@ -9,21 +9,21 @@ use App\Models\Products;
 class ProductsController extends Controller
 {
     //* MOSTRAR TODOS OS PRODUTOS
-    public function index()
+    public function showAll()
     {
         return Products::all();
     }
 
-    //* CRIAR PRODUTO
-    public function store(Request $request)
-    {
-        Products::create($request->all());
-    }
-
-    //* BUSCAR UM ÚNICO PRODUTO
-    public function show($id)
+    //* MOSTRAR UM ÚNICO PRODUTO
+    public function showById($id)
     {
         return Products::findOrFail($id);
+    }
+
+    //* CRIAR PRODUTO
+    public function create(Request $request)
+    {
+        Products::create($request->all());
     }
 
     //* ATUALIZAR PRODUTO
@@ -34,7 +34,7 @@ class ProductsController extends Controller
     }
 
     //* DELETAR PRODUTO
-    public function destroy($id)
+    public function delete($id)
     {
         $products = Products::findOrFail($id);
         $products->delete();
