@@ -5,6 +5,9 @@ Changelog
   - Hotfix
   - Bugfix
 
+# v1.0.4
+    - Correção exibição do relatório.
+    - Adicionado endpoint para visualizar histórico de movimentações de produtos.
 # v1.0.3
     - Adicionada solução para salvar histórico de quantidade de produtos.
     - Endpoints que manipulam banco alterados para evitar quebra de inseções ou remoções.
