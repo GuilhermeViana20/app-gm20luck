@@ -36,6 +36,6 @@ $ php artisan serve
 
 ### INSERIR DADOS NO BANCO
 
-INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`) VALUES ('Tênis', 'Nike', 'AIR FORCE', '42', 'Masculino', 'TEN-NIK-AFC-042-MAS', '234', '234', '2021-11-13 16:54:37');
-INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`) VALUES ('Tênis', 'Nike', 'AIR JORDAN', '38', 'Feminino', 'TEN-NIK-AJN-038-FEM', '234', '234', '2021-11-13 16:54:37');
-INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`) VALUES ('Tênis', 'Nike', 'AIR MAX INFINITY', '39', 'Unissex', 'TEN-NIK-AFC-039-UNI', '234', '234', '2021-11-13 16:54:37');
+INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`, `updated_at`) VALUES ('Tênis', 'Nike', 'AIR FORCE', '42', 'Masculino', 'TEN-NIK-AFC-042-MAS', '234', '234', '2021-11-13 16:54:37', '2021-11-13 16:54:37');
+INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`, `updated_at`) VALUES ('Tênis', 'Nike', 'AIR JORDAN', '38', 'Feminino', 'TEN-NIK-AJN-038-FEM', '234', '234', '2021-11-13 16:54:37', '2021-11-13 16:54:37');
+INSERT INTO `desafioappmax`.`products` (`tipo`, `marca`, `nome`, `tamanho`, `genero`, `sku`, `quantidade_atual`, `quantidade_antiga`, `created_at`, `updated_at`) VALUES ('Tênis', 'Nike', 'AIR MAX INFINITY', '39', 'Unissex', 'TEN-NIK-AFC-039-UNI', '234', '234', '2021-11-13 16:54:37', '2021-11-13 16:54:37');
