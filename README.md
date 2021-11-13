@@ -15,9 +15,11 @@
 [https://laragon.org/download/index.html](https://laragon.org/download/index.html)
 
 #### - Criar Banco de Dados
-Suponho que já tenha acessado o painel do laragon, agora clique em "Iniciar Tudo".
-Após isso, acesso o Banco de Dados e crie um novo com o seguinte nome: desafioappmax
-Pronto, já pode executar a API :)
+```bash
+# Suponho que já tenha acessado o painel do laragon, agora clique em "Iniciar Tudo".
+# Após isso, acesso o Banco de Dados e crie um novo com o seguinte nome: desafioappmax
+# Pronto, já pode executar a API :)
+```
 
 ## Passos para Executar API
 
