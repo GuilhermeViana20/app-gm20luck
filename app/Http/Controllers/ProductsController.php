@@ -135,4 +135,36 @@ class ProductsController extends Controller
             ], 400);
         }
     }
+
+    public function history()
+    {
+        try {
+            $products = new Products();
+            $products = $products->orderBy('nome')->get();
+    
+            foreach ($products as $key => $product) {
+                $product->criado_em = date('d/m/Y H:i:s', strtotime($product->created_at));
+                $product->atualizado_em = date('d/m/Y H:i:s', strtotime($product->updated_at));
+                
+                $dados[$key] = ([
+                    'sku' => $product->sku ? $product->sku : null,
+                    'quantidade_atual' => $product->quantidade_atual ? $product->quantidade_atual : null,
+                    'quantidade_antiga' => $product->quantidade_antiga ? $product->quantidade_antiga : null,
+                    'criado_em' => $product->criado_em ? $product->criado_em : null,
+                    'atualizado_em' => $product->atualizado_em ? $product->atualizado_em : null,
+                ]);
+            }
+    
+            return Response::json([
+                'sucesso'=> true,
+                'dados' => $dados
+            ], 200);
+        } catch (\Exception $e) {
+            return Response::json([
+                'sucesso'=> false,
+                'mensagem'=> 'Ops! Não foi possivel realizar esta ação!',
+                'dados'=> $e->getMessage(),
+            ], 400);
+        }
+    }
 }
