@@ -5,6 +5,11 @@ Changelog
   - Hotfix
   - Bugfix
 
+# v1.0.3
+    - Adicionada solução para salvar histórico de quantidade de produtos.
+    - Endpoints que manipulam banco alterados para evitar quebra de inseções ou remoções.
+    - Adicionado verificação de transaction nos endpoints.
+    - Construção do README.md iniciado.
 # v1.0.2
     - Correção dos endpoints definindo seus métodos.
     - Correção nas funções dos endpoints.

@@ -26,7 +26,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/', 'App\Http\Controllers\ProductsController@showAll');
         Route::get('/{id}', 'App\Http\Controllers\ProductsController@showById');
         Route::post('/create', 'App\Http\Controllers\ProductsController@create');
-        Route::patch('/update/{id}', 'App\Http\Controllers\ProductsController@update');
+        Route::post('/update/{id}', 'App\Http\Controllers\ProductsController@update');
         Route::delete('/delete/{id}', 'App\Http\Controllers\ProductsController@delete');
     });
 
