@@ -24,6 +24,7 @@ Route::group(['prefix' => 'v1'], function () {
 
     Route::group(['prefix' => 'products'], function () {
         Route::get('/', 'App\Http\Controllers\ProductsController@showAll');
+        Route::get('/history', 'App\Http\Controllers\ProductsController@history');
         Route::get('/{id}', 'App\Http\Controllers\ProductsController@showById');
         Route::post('/create', 'App\Http\Controllers\ProductsController@create');
         Route::post('/update/{id}', 'App\Http\Controllers\ProductsController@update');

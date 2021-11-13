@@ -1,5 +1,10 @@
 # Guilherme Viana
 
+## Configurações usadas no projeto
+
+$ PHP na versão 7.3 ou superior
+$ Laravel na versão: 8.0
+
 ## Configurações Iniciais
 
 ```bash

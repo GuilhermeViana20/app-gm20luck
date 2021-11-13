@@ -37,7 +37,8 @@
                                 <th>Tamanho</th>
                                 <th>Gênero</th>
                                 <th>SKU</th>
-                                <th>Quantidade</th>
+                                <th>Quantidade Atual</th>
+                                <th>Quantidade Antiga</th>
                                 <th>Criado em</th>
                                 <th>Última modificação</th>
                             </tr>
@@ -51,9 +52,10 @@
                                 <td>{{ $product->tamanho }}</td>
                                 <td>{{ $product->genero }}</td>
                                 <td>{{ $product->sku }}</td>
-                                <td>{{ $product->quantidade }}</td>
-                                <td>{{ date('h:i:s d/m/Y', strtotime($product->created_at)) }}</td>
-                                <td>{{ date('h:i:s d/m/Y', strtotime($product->updated_at)) }}</td>
+                                <td>{{ $product->quantidade_atual }}</td>
+                                <td>{{ $product->quantidade_antiga }}</td>
+                                <td>{{ date("d/m/Y H:i:s",strtotime($product->created_at)) }}</td>
+                                <td>{{ date("d/m/Y H:i:s",strtotime($product->updated_at)) }}</td>
                             </tr>
                             @endforeach
                         </tbody>
