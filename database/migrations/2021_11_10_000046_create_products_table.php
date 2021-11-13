@@ -21,7 +21,8 @@ class CreateProductsTable extends Migration
             $table->Integer('tamanho');
             $table->string('genero');
             $table->string('sku');
-            $table->Integer('quantidade');
+            $table->Integer('quantidade_atual');
+            $table->Integer('quantidade_antiga');
             $table->timestamps();
         });
     }
