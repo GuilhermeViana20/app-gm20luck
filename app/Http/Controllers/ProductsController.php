@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
-
+use Exception;
 use App\Models\Products;
 
 class ProductsController extends Controller
@@ -38,22 +38,29 @@ class ProductsController extends Controller
             $quantidade_atual = $request->quantidade_atual ? $request->quantidade_atual : null;
             $quantidade_antiga = $quantidade_atual;
 
-            Products::create([
-                'tipo' => $tipo,
-                'marca' => $marca,
-                'nome' => $nome,
-                'tamanho' => $tamanho,
-                'genero' => $genero,
-                'sku' => $sku,
-                'quantidade_atual' => $quantidade_atual,
-                'quantidade_antiga' => $quantidade_antiga,
-            ]);
-            
-            DB::commit();
-            return Response::json([
-                'sucesso'=> true,
-                'mensagem'=> 'Produto criado com sucesso!',
-            ], 200);
+            if( (empty($tipo)) || (empty($marca)) || (empty($nome)) || (empty($tamanho)) || (empty($genero)) || (empty($sku)) || (empty($quantidade_atual)) || (empty($quantidade_antiga)) ) {
+                return Response::json([
+                    'sucesso'=> false,
+                    'mensagem'=> 'Ops! Preencha todos os campos obrigatórios!',
+                ], 200);
+            } else {
+                Products::create([
+                    'tipo' => $tipo,
+                    'marca' => $marca,
+                    'nome' => $nome,
+                    'tamanho' => $tamanho,
+                    'genero' => $genero,
+                    'sku' => $sku,
+                    'quantidade_atual' => $quantidade_atual,
+                    'quantidade_antiga' => $quantidade_antiga,
+                ]);
+                
+                DB::commit();
+                return Response::json([
+                    'sucesso'=> true,
+                    'mensagem'=> 'Produto criado com sucesso!',
+                ], 200);
+            }
         } catch (\Exception $e) {
             DB::rollBack();
             return Response::json([

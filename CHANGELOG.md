@@ -5,6 +5,8 @@ Changelog
   - Hotfix
   - Bugfix
 
+# v1.0.5
+    - Verificando se ao cadastrar produto possui campos null, se houver não salva no BD.
 # v1.0.4
     - Correção exibição do relatório.
     - Adicionado endpoint para visualizar histórico de movimentações de produtos.
